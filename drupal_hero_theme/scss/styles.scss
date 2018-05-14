@@ -47,8 +47,9 @@
 // Styles for navbar block
 
 .b-navbar {
-	margin-top: 40px; // ********************* DEV ONLY
-	position: relative;	
+	position: fixed;
+	top: 40px; // ********************* DEV ONLY, default 0	
+	left: 0;
 	padding: .5rem .8rem;
 	background-color: $creamYellow;
 	// Styles for navbar button and it's bars
@@ -76,8 +77,7 @@
 // Styles for navbar content container
 
 .b-navbar-content-container,
-.b-menu-list {
-	display: none;
+.b-menu-list {	
 	flex-flow: column nowrap;
 	@media (min-width: 576px) {
 		/**
@@ -93,6 +93,7 @@
 			right: 2rem;
 		}
 	}
+	&--hidden { display: none; }
 }
 
 // Styles for main and account menu items on navbar

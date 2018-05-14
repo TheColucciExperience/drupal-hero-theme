@@ -48,8 +48,10 @@
 
 .b-navbar {
 	position: fixed;
+	z-index: 20;
 	top: 40px; // ********************* DEV ONLY, default 0	
 	left: 0;
+	width: 100%;
 	padding: .5rem .8rem;
 	background-color: $creamYellow;
 	// Styles for navbar button and it's bars

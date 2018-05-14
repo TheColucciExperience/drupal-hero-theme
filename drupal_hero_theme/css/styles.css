@@ -52,8 +52,10 @@
 
 .b-navbar {
   position: fixed;
+  z-index: 20;
   top: 40px;
   left: 0;
+  width: 100%;
   padding: .5rem .8rem;
   background-color: #fff88d; }
   .b-navbar__button {

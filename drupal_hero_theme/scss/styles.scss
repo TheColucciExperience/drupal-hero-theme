@@ -1,0 +1,53 @@
+/**
+ * Main file for hero theme styles. We'll use the BEM methodology for
+ * modular css.
+ */
+
+// Importing necessary assets
+
+@import 'fonts';
+@import 'colors';
+@import 'animations';
+
+// Reseting box-sizing for elements
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+// For screen readers
+
+.sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0;
+}	
+
+// Initial styles for page container
+
+.b-page {
+	position: relative;	
+	min-height: 100vh;	
+	background-color: #111;
+}
+
+// Styles for navbar block
+
+.b-navbar {
+	position: relative;	
+	padding: .5rem .8rem;
+	background: {
+		image: url('../images/paper-background-texture.jpg');		
+		repeat: repeat;
+		position: center;
+	}	
+}

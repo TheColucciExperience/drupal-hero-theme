@@ -1,0 +1,16 @@
+global-css:
+  version: 1.0
+  css:
+    theme:
+      css/styles.css: {}  
+
+fonts:
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,400i,700,700i': { type: external, minified: true }
+
+global-js:
+  js:
+    js/app.js: {}
+  dependencies:
+    - core/jquery

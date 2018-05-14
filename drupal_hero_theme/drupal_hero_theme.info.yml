@@ -1,0 +1,19 @@
+name: Drupal Hero Theme
+description: A simple drupal theme based on comic book heroes
+type: theme
+version: 1.0
+core: 8.x
+
+libraries:  
+  - drupal_hero_theme/global-css
+  - drupal_hero_theme/global-js
+  - drupal_hero_theme/fonts
+
+regions:
+  navbar: Navbar
+  header: Header
+  aside: Sidebar
+  content: Content
+  footer: Footer
+  page_top: Page Top
+  page_bottom: Page Bottom

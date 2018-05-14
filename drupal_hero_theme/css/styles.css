@@ -1,0 +1,39 @@
+/**
+ * Main file for hero theme styles. We'll use the BEM methodology for
+ * modular css.
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  border: 0; }
+
+.b-page {
+  position: relative;
+  min-height: 100vh;
+  background-color: #111; }
+
+.b-navbar {
+  position: relative;
+  padding: .5rem .8rem;
+  background-image: url("../images/paper-background-texture.jpg");
+  background-repeat: repeat;
+  background-position: center; }
+
+/*# sourceMappingURL=styles.css.map */

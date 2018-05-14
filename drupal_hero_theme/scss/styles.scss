@@ -1,6 +1,9 @@
 /**
  * Main file for hero theme styles. We'll use the BEM methodology for
- * modular css.
+ * modular css. Classes without the 'b' namespace are built in the Drupal template, so we
+ * just override them. Also, sometimes it's very impractical to apply styles to nested elements, so we use
+ * descendent selectors when necessary, even tough that goes against BEM's conventions. Beware, tough, we
+ * seldom do this.
  */
 
 // Importing necessary assets
@@ -9,18 +12,19 @@
 @import 'colors';
 @import 'animations';
 
-// Reseting box-sizing for elements
+// Reseting box-sizing for elements and adding custom outline
 
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	&:focus { outline: 1px solid $yellow; }
 }
 
 // For screen readers
 
 .sr-only {
-	position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -43,11 +47,81 @@
 // Styles for navbar block
 
 .b-navbar {
+	margin-top: 40px; // ********************* DEV ONLY
 	position: relative;	
 	padding: .5rem .8rem;
-	background: {
-		image: url('../images/paper-background-texture.jpg');		
-		repeat: repeat;
-		position: center;
-	}	
+	background-color: $creamYellow;
+	// Styles for navbar button and it's bars
+	&__button {
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #222;
+		padding: .7rem;
+		background-color: $yellow;
+		box-shadow: 1px 2px 2px transparentize( #111, .4 );
+		@media (min-width: 576px) { display: none; }		
+	}
+	&__bar {
+		position: relative;
+		display: block;
+		width: 1.5rem;
+		height: .2rem;		
+		background-color: #333;
+		&:not(:last-child) { margin-bottom: .2rem; }
+	}
+}
+
+// Styles for navbar content container
+
+.b-navbar-content-container,
+.b-menu-list {
+	display: none;
+	flex-flow: column nowrap;
+	@media (min-width: 576px) {
+		/**
+		 * The 'important' is necessary here to avoid js hiding it on button toggle
+		 * if hte user resize the page
+		 */
+		display: flex !important;
+		flex-flow: row nowrap;
+	}
+	&--padded {
+		padding: {
+			left: 2rem;
+			right: 2rem;
+		}
+	}
+}
+
+// Styles for main and account menu items on navbar
+
+.b-menu-list {
+	flex: 1;
+	list-style-type: none;
+	padding-left: 0;
+	&__item {
+		padding: {
+			bottom: .2rem;
+			top: .2rem;
+		}
+		text-align: center;
+		@media (min-width: 576px) {
+			border-bottom: 2px solid black;
+			margin-right: 1.5rem;
+			transition-duration: .4s;
+			&:hover { border-color: #666; }
+		}
+		> a {
+			font: {
+				family: $titleFont;
+				size: 1.2rem;
+			}
+			color: #444;
+			text-decoration: none;
+			transition-duration: .4s;
+			&:hover { color: #111; }
+		}
+	}
 }

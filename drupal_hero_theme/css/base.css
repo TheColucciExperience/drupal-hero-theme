@@ -1,0 +1,71 @@
+/**
+ * Base styles file for hero drupal theme. We'll use the BEM methodology for
+ * modular css along with some smacss structuring. Classes without the 'b'
+ * namespace are built in the Drupal template or are modules, so so sometimes
+ * override them. Also, sometimes it's very impractical to apply styles 
+ * to nested elements, so we use descendent selectors following smacss
+ * methodology when necessary, even tough that goes against BEM's conventions.
+ * Beware, tough, we seldom do this.
+ */
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes topBarStart {
+  100% {
+    transform: rotate(45deg) translate(0.1rem, 0.2rem); } }
+@keyframes bottomBarStart {
+  100% {
+    transform: rotate(-45deg) translate(0.1rem, -0.2rem); } }
+@keyframes topBarRestart {
+  0% {
+    transform: rotate(45deg) translate(0.1rem, 0.2rem); }
+  100% {
+    transform: none; } }
+@keyframes bottomBarRestart {
+  0% {
+    transform: rotate(-45deg) translate(0.1rem, -0.2rem); }
+  100% {
+    transform: none; } }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+  *:focus {
+    outline: 1px solid #fff441; }
+
+/** 
+ * Base styles for modules. These need to be inside the 'b-page block'
+ * to avoid styling the admin toolbar.
+ */
+.b-page h1,
+.b-page h2,
+.b-page h3,
+.b-page h4,
+.b-page h5,
+.b-page h6,
+.b-page a,
+.b-page button,
+.b-page input {
+  font-family: "Permanent Marker", cursive; }
+.b-page h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem; }
+.b-page p,
+.b-page span {
+  font-family: "Lato", sans-serif; }
+.b-page button:not(.b-navbar__button),
+.b-page input[type="button"],
+.b-page input[type="submit"] {
+  border: none;
+  margin-bottom: .4rem;
+  padding: .5rem .7rem;
+  background-color: #444;
+  color: #fff; }
+.b-page input {
+  margin-bottom: .4rem; }
+.b-page ul {
+  list-style-type: none; }
+
+/*# sourceMappingURL=base.css.map */

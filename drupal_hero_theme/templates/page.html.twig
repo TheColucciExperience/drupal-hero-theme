@@ -23,11 +23,32 @@
 
 	{% if page.header %}
 
-		<header>
-			{{ page.header }}
-		</header>
+		{{ page.header }}		
 
 	{% endif %}
 
+	<main class="b-main">
+
+		{% if page.content %}
+
+			{{ page.content }}
+
+		{% endif %}
+
+		{% if page.aside %}
+
+			{{ page.aside }}
+
+		{% endif %}
+
+	</main>
+
+	{# Footer section #}
+
+	{% if page.footer %}
+
+		{{ page.footer }}
+
+	{% endif %}
 
 </div>

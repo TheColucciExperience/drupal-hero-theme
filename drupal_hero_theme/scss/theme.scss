@@ -2,7 +2,7 @@
  * Theme styles file for hero drupal theme. We'll use the BEM methodology for
  * modular css along with some smacss structuring. Classes without the 'b'
  * namespace are built in the Drupal template or are modules, so so sometimes
- * override them. Also, sometimes it's very impractical to apply styles 
+ * override them. Also, sometimes it's very impractical to apply styles
  * to nested elements, so we use descendent selectors following smacss
  * methodology when necessary, even tough that goes against BEM's conventions.
  * Beware, tough, we seldom do this.
@@ -29,19 +29,19 @@
   -webkit-clip-path: inset(50%);
   clip-path: inset(50%);
   border: 0;
-}	
+}
 
 // Initial styles for page container
 
 .b-page {
-	position: relative;	
-	min-height: 100vh;	
-	background-color: #111;	
+	position: relative;
+	min-height: 100vh;
+	background-color: #111;
 }
 
 // Styles for navbar content container
 
-.b-navbar-content-container {	
+.b-navbar-content-container {
 	flex-flow: column nowrap;
 	@media (min-width: 576px) {
 		/**
@@ -84,20 +84,20 @@
 		padding: .7rem;
 		background-color: $yellow;
 		box-shadow: 1px 2px 2px transparentize( #111, .4 );
-		@media (min-width: 576px) { display: none; }		
+		@media (min-width: 576px) { display: none; }
 	}
 	&__bar {
 		position: relative;
 		display: block;
 		width: 1.5rem;
-		height: .2rem;		
+		height: .2rem;
 		background-color: #333;
 		&:not(:last-child) { margin-bottom: .2rem; }
 	}
 	// Styles for main and account menu items on navbar
 	& .b-menu-list {
 		@extend .b-navbar-content-container;
-		flex: 1;		
+		flex: 1;
 		padding-left: 0;
 		&__item {
 			padding: {
@@ -112,7 +112,7 @@
 				&:hover { border-color: #666; }
 			}
 			> a {
-				font-size: 1.2rem;				
+				font-size: 1.2rem;
 				color: #444;
 				text-decoration: none;
 				transition-duration: .4s;
@@ -127,8 +127,8 @@
 .b-header {
 	position: relative;
 	display: flex;
-	width: 100vw;
 	height: 100vh;
+  overflow-x: hidden;
 	justify-content: center;
 	align-items: center;
 	background: {
@@ -159,7 +159,7 @@
 		padding: {
 			right: .5rem;
 			left: .5rem;
-		}		
+		}
 		text-align: center;
 		color: #fff;
 	}
@@ -176,7 +176,7 @@
 
 .b-main {
 	display: flex;
-	flex-flow: column nowrap;	
+	flex-flow: column nowrap;
 	justify-content: center;
 	padding: 2rem 1rem;
 	background: {

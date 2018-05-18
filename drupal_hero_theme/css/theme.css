@@ -2,7 +2,7 @@
  * Theme styles file for hero drupal theme. We'll use the BEM methodology for
  * modular css along with some smacss structuring. Classes without the 'b'
  * namespace are built in the Drupal template or are modules, so so sometimes
- * override them. Also, sometimes it's very impractical to apply styles 
+ * override them. Also, sometimes it's very impractical to apply styles
  * to nested elements, so we use descendent selectors following smacss
  * methodology when necessary, even tough that goes against BEM's conventions.
  * Beware, tough, we seldom do this.
@@ -119,8 +119,8 @@
 .b-header {
   position: relative;
   display: flex;
-  width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   justify-content: center;
   align-items: center;
   background-color: #444;
